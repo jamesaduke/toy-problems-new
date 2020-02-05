@@ -28,4 +28,10 @@
 # NOTE: There will also be lists tested of lengths upwards of 10,000,000 elements. Be sure your code doesn't time out.
 
 def sum_pairs(lst, s):
+  seen = set()
+  for x in ints:
+    if (s-x) in seen:
+      return [s-x, x]
+    seen.add(x)
   
+  return None
