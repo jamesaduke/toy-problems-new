@@ -29,7 +29,7 @@
 
 def sum_pairs(lst, s):
   seen = set()
-  for x in ints:
+  for x in lst:
     if (s-x) in seen:
       return [s-x, x]
     seen.add(x)
