@@ -40,9 +40,8 @@ def time_conversion(s):
         hour = '00'
     if second_ampm[2:] == "PM" and hour == '12':
         hour = '12'
-        return
     converted_time = hour + ':' + minute + ':' + second_ampm[0:2]
     print(converted_time)
 
 
-time_conversion('12:05:45AM')
+time_conversion('12:45:54PM')
