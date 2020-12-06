@@ -46,5 +46,5 @@ function tortoiseRace(v1, v2, g) {
     if (v1 >= v2) return null;
     return [Math.floor(hours), Math.floor(minutes),Math.floor(seconds)];
 
-};
+}
 tortoiseRace(720, 850, 70);
