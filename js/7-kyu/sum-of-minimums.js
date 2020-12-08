@@ -22,3 +22,5 @@ function sumOfMinimum(arr){
     return arr.reduce( (acc, cur) => acc + Math.min(...cur), 0);
 
 }
+
+sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]]);
