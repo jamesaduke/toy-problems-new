@@ -30,3 +30,9 @@ function songDecoder(song){
     return replaceStr.replace(/  +/g, ' ').trim();
 }
 songDecoder("AWUBBWUBC");
+
+
+// Even finer solution
+// function songDecoder(song){
+//     return song.replace(/(WUB)+/g," ").trim()
+// }
