@@ -21,7 +21,7 @@ strs[i] consists of only lower-case English letters.
  */
 
 var longestCommonPrefix = function(strs) {
-    if (!strs[0] || strs.length == 1 || strs.length == 0){ return ""; }
+    if (!strs[0] || strs.length == 0){ return " "; }
     // The longest prefix will never be greater than the smallest string in the string of arrays
     const shortestWordlength = Math.min(...strs.map(string  => string.length));
     const prefixLetters = [];
@@ -38,4 +38,4 @@ var longestCommonPrefix = function(strs) {
   };
 
 console.log(longestCommonPrefix(["flower","flow","flight"]));
-
+console.log(longestCommonPrefix([]));
