@@ -52,7 +52,7 @@
     let index = 0;
 
     for (let i = 0; i < nums.length; i++ ){
-        if(nums[i] != nums[i-1]){
+        if(nums[i] != nums[i+1]){
             nums[index] = nums[i];
             console.log("index is " + index + " this is array " + nums);
             index++;
@@ -61,4 +61,4 @@
     return index;
 };
 
-removeDuplicates([1,1,2]);
+console.log(removeDuplicates([1,1,2,3,4,4]));
