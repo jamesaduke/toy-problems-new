@@ -11,27 +11,27 @@
 // I am going to solve this problem using a hash table.
 
 function findInterSection(strArr) {
-    // convert the string elements into individual array elements
-    const lists = strArr.map(list => list.split(', '));
+	// convert the string elements into individual array elements
+	const lists = strArr.map(list => list.split(', '));
 
-    const firstList = lists[0];
-    const secondList = lists[1];
+	const firstList = lists[0];
+	const secondList = lists[1];
 
-    // create a hashMap for the first list to be used to compare with the second list for  intersection
-    let matchingHash ={};
-    let result = [];
+	// create a hashMap for the first list to be used to compare with the second list for  intersection
+	let matchingHash ={};
+	let result = [];
 
-    firstList.forEach(num => matchingHash[num] = true);
+	firstList.forEach(num => matchingHash[num] = true);
 
-    secondList.forEach(num => {
+	secondList.forEach(num => {
 
-        if(matchingHash[num]){
-            result.push(num);
-        }
-    })
-    if (result.length > 0) {
-        return result.join(",");
-    } else { return false;}
+		if(matchingHash[num]){
+			result.push(num);
+		}
+	});
+	if (result.length > 0) {
+		return result.join(",");
+	} else { return false;}
 
 }
 
