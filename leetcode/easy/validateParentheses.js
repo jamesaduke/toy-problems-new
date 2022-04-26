@@ -26,23 +26,25 @@
 // s consists of parentheses only '()[]{}'
 
 var isValid = function (string) {
-    const bracketObject = {
-        "(": ")",
-        "{": "}",
-        "[": "]",
-    }
-    // the array used as a stack to check if the brackets are in the correct order
-    let stack = [];
+	const bracketObject = {
+		"(": ")",
+		"{": "}",
+		"[": "]",
+	};
+	// the array used as a stack to check if the brackets are in the correct order
+	let stack = [];
 
-    for (char of string){
-        if(bracketObject[char]){
-            stack.push(bracketObject[char]);
-        }else if( string.length > 0 && stack[stack.length - 1] === char){
-            // char is a closing bracket and the last element in the stack matches the char
-            stack.pop();
-        }else{
-            return false;
-        }
-    }
-    return stack.length === 0;
+	for (let char of string){
+		if(bracketObject[char]){
+			stack.push(bracketObject[char]);
+		}else if( string.length > 0 && stack[stack.length - 1] === char){
+			// char is a closing bracket and the last element in the stack matches the char
+			stack.pop();
+		}else{
+			return false;
+		}
+	}
+	return stack.length === 0;
 };
+
+console.log(isValid("()"));

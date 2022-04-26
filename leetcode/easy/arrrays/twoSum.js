@@ -14,17 +14,17 @@
 // oprimized solutions still not getting it 🕵🏿‍♀️
 
 var twoSum = function(nums, target) {
-    const indicies = {};
+	const indicies = {};
 
-    for (let i = 0; i < nums.length; i++) {
-      const num = nums[i];
-      indicies[num] = i;
-      if (indicies[target - num] != null) {
-        console.log(indicies);
-        return [indicies[target - num], i]
-      }
-  };
-}
+	for (let i = 0; i < nums.length; i++) {
+		const num = nums[i];
+		indicies[num] = i;
+		if (indicies[target - num] != null) {
+			console.log(indicies);
+			return [indicies[target - num], i];
+		}
+	}
+};
 
 let nums = [3,2 ,4];
 let target = 7;
