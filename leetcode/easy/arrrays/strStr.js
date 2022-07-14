@@ -31,18 +31,28 @@
  * @return {number}
  */
 
-var strStr = function (haystack, needle) {
-	//edge case
-	if (needle =="") return 0;
-	for(let i = 0; i<haystack.length; i++){
-		let j = 0;
-		for(;j<needle.length;j++){
-			if(needle[j] !== haystack[i+j]) break;
-		}
+// var strStr = function (haystack, needle) {
+// 	//edge case
+// 	if (needle =="") return 0;
+// 	for(let i = 0; i<haystack.length; i++){
+// 		let j = 0;
+// 		for(;j<needle.length;j++){
+// 			if(needle[j] !== haystack[i+j]) break;
+// 		}
 
-		if(j === needle.length ) return i;
+// 		if(j === needle.length ) return i;
+// 	}
+// 	return -1;
+// };
+
+
+// Alternative implementation using Substring
+let strStr = function(haystack, needle){
+	if (needle === "") return 0;
+	for (let i =0; i < haystack.length - needle.length; i++) {
+		if(needle === haystack.substring(i, i + needle.length)) return i;
 	}
-	return -1;
+	return - 1;
 };
 
 console.log(strStr("hello", "ll"));
